@@ -51,7 +51,6 @@
         }
       });
     }
-
     function loadSoal() {
       fetch(scriptURL, {
         method: 'POST',
@@ -89,7 +88,6 @@
         document.getElementById('soalContainer').classList.remove('hidden');
       });
     }
-
     function submitJawaban() {
       const form = document.getElementById('soalForm');
       let score = 0;
@@ -101,7 +99,6 @@
         const kunci = soal.jawaban_benar.split(',').map(x => x.trim());
         if (arraysEqualNoOrder(selected, kunci)) score++;
       });
-
       fetch(scriptURL, {
         method: 'POST',
         headers: {
