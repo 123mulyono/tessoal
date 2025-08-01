@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal Interaktif</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 800px; margin: auto; }
+    .hidden { display: none; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <h2>Login Siswa</h2>
+  <div id="loginForm">
+    Username: <input type="text" id="username"><br>
+    Password: <input type="password" id="password"><br>
+    <button onclick="login()">Login</button>
+    <p id="loginMsg" style="color:red;"></p>
+  </div>
+
+  <div id="soalContainer" class="hidden">
+    <form id="soalForm"></form>
+    <button onclick="submitJawaban()">Kirim Jawaban</button>
+    <p id="skorHasil"></p>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwzbsfYG2a-htJEGZaLKNfR_BJBU6gWNyUNBtf-xKBVg8fI58Nmx_WwaxTZofJk0MycYQ/exec';
+    let soalData = [];
+    let currentUser = '';
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify({ action: 'login', username, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          currentUser = username;
+          document.getElementById('loginForm').classList.add('hidden');
+          loadSoal();
+        } else {
+          document.getElementById('loginMsg').textContent = "Login gagal!";
+        }
+      });
+    }
+
+    function loadSoal() {
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify({ action: 'get_soal' })
+      })
+      .then(res => res.json())
+      .then(data => {
+        soalData = shuffleArray(data.soal);
+        const form = document.getElementById('soalForm');
+        form.innerHTML = '';
+        soalData.forEach((soal, i) => {
+          const div = document.createElement('div');
+          div.innerHTML = `<p><strong>${i+1}. ${soal.pertanyaan}</strong></p>`;
+          if (soal.gambar_url) {
+            div.innerHTML += `<img src="${soal.gambar_url}"><br>`;
+          }
+          const options = ['pilihan1', 'pilihan2', 'pilihan3', 'pilihan4'];
+          if (soal.tipe === 'pilihan2') {
+            options.forEach(opt => {
+              if (soal[opt])
+                div.innerHTML += `<label><input type="checkbox" name="soal${i}" value="${soal[opt]}"> ${soal[opt]}</label><br>`;
+            });
+          } else {
+            options.forEach(opt => {
+              if (soal[opt])
+                div.innerHTML += `<label><input type="radio" name="soal${i}" value="${soal[opt]}"> ${soal[opt]}</label><br>`;
+            });
+          }
+          form.appendChild(div);
+        });
+        document.getElementById('soalContainer').classList.remove('hidden');
+      });
+    }
+
+    function submitJawaban() {
+      const form = document.getElementById('soalForm');
+      let score = 0;
+      const jawaban = [];
+      soalData.forEach((soal, i) => {
+        const inputs = form.querySelectorAll(`[name="soal${i}"]`);
+        const selected = Array.from(inputs).filter(el => el.checked).map(el => el.value);
+        jawaban.push(selected.join(','));
+        const kunci = soal.jawaban_benar.split(',').map(x => x.trim());
+        if (arraysEqualNoOrder(selected, kunci)) score++;
+      });
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify({ action: 'submit', username: currentUser, answers: jawaban, score })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('skorHasil').textContent = `Skor kamu: ${score} dari ${soalData.length}`;
+      });
+    }
+
+    function shuffleArray(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function arraysEqualNoOrder(a, b) {
+      if (a.length !== b.length) return false;
+      return a.sort().join(',') === b.sort().join(',');
+    }
+  </script>
+</body>
+</html>
