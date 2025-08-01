@@ -34,8 +34,12 @@
       const password = document.getElementById('password').value;
       fetch(scriptURL, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ action: 'login', username, password })
       })
+
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -51,8 +55,12 @@
     function loadSoal() {
       fetch(scriptURL, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ action: 'get_soal' })
       })
+
       .then(res => res.json())
       .then(data => {
         soalData = shuffleArray(data.soal);
@@ -96,8 +104,12 @@
 
       fetch(scriptURL, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ action: 'submit', username: currentUser, answers: jawaban, score })
       })
+
       .then(res => res.json())
       .then(data => {
         document.getElementById('skorHasil').textContent = `Skor kamu: ${score} dari ${soalData.length}`;
