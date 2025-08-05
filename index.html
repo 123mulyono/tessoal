@@ -171,10 +171,6 @@
             showPage("examPage");
         }
         
-        /**
-         * Merender pertanyaan saat ini ke dalam container.
-         * PERUBAHAN: Sekarang mengganti placeholder [GAMBAR] dengan gambar yang sebenarnya.
-         */
         function renderQuestion() {
             if (currentQuestion >= questions.length) return;
             const q = questions[currentQuestion];
@@ -184,14 +180,11 @@
             const el = document.createElement("div");
             el.className = "space-y-4";
             
-            // --- LOGIKA BARU UNTUK GAMBAR DI TENGAH TEKS ---
             let questionHTML = `Soal ${currentQuestion + 1}: ${q.question}`;
 
-            // Cek apakah ada properti 'image' dan placeholder '[GAMBAR]'
             if (q.image && questionHTML.includes('[GAMBAR]')) {
-                // Buat tag <img> sebagai string HTML
-                const imgTag = `<img src="images/${q.image}" alt="Gambar Soal" class="my-4 w-full max-w-sm mx-auto rounded-lg shadow-md">`;
-                // Ganti placeholder dengan tag gambar
+                // PERUBAHAN DI SINI: Menghapus "images/" dari path
+                const imgTag = `<img src="${q.image}" alt="Gambar Soal" class="my-4 w-full max-w-sm mx-auto rounded-lg shadow-md">`;
                 questionHTML = questionHTML.replace('[GAMBAR]', imgTag);
             }
             
@@ -199,7 +192,6 @@
             questionDiv.className = 'font-semibold text-lg';
             questionDiv.innerHTML = questionHTML;
             el.appendChild(questionDiv);
-            // --- AKHIR LOGIKA BARU ---
 
             if (q.type === "single") {
                 q.options.forEach((opt, idx) => {
@@ -214,7 +206,8 @@
                     label.className = 'block p-3 border rounded-lg hover:bg-gray-100';
                     const isChecked = answers[currentQuestion] && answers[currentQuestion].includes(idx);
                     if (typeof opt === 'object' && opt.image) {
-                        label.innerHTML = `<input type="checkbox" value="${idx}" onchange="toggleMultipleAnswer(${idx})" ${isChecked ? 'checked' : ''}> <img src="images/${opt.image}" class="inline h-6 w-6 mr-2">${opt.text}`;
+                        // PERUBAHAN DI SINI: Menghapus "images/" dari path opsi
+                        label.innerHTML = `<input type="checkbox" value="${idx}" onchange="toggleMultipleAnswer(${idx})" ${isChecked ? 'checked' : ''}> <img src="${opt.image}" class="inline h-6 w-6 mr-2">${opt.text}`;
                     } else {
                         label.innerHTML = `<input type="checkbox" value="${idx}" onchange="toggleMultipleAnswer(${idx})" ${isChecked ? 'checked' : ''}> ${opt}`;
                     }
@@ -313,4 +306,3 @@
     </script>
 </body>
 </html>
-
