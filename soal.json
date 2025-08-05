@@ -2,7 +2,8 @@
   {
     "kategori": "ipa",
     "type": "single",
-    "question": "Perhatikan gambar berikut! <br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Water_cycle_in-id.svg/500px-Water_cycle_in-id.svg.png' width='250'><br>Gambar di atas menunjukkan?",
+    "question": "Perhatikan gambar berikut! <br> [GAMBAR] <br>Gambar di atas menunjukkan?",
+    "image": "images/meja.png",
     "options": ["Fotosintesis", "Siklus air", "Pembekuan air", "Perubahan kimia"],
     "answer": 1,
     "score": 1
@@ -10,12 +11,13 @@
   {
     "kategori": "ips",
     "type": "multiple",
-    "question": "Manakah yang termasuk jenis pekerjaan berikut? <br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Farmer_ploughing_rice_field.jpg/320px-Farmer_ploughing_rice_field.jpg' width='250'>",
+    "question": "Manakah yang termasuk jenis pekerjaan berikut? <br> [GAMBAR]",
+    "image": "images/meja.png",
     "options": [
-      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Teacher_Icon.png/48px-Teacher_Icon.png'> Guru",
-      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Farmer_Icon.png/48px-Farmer_Icon.png'> Petani",
-      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Doctor_icon.png/48px-Doctor_icon.png'> Dokter",
-      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Firefighter_icon.png/48px-Firefighter_icon.png'> Pemadam"
+      { "image": "guru_icon.png", "text": "Guru" },
+      { "image": "petani_icon.png", "text": "Petani" },
+      { "image": "dokter_icon.png", "text": "Dokter" },
+      { "image": "pemadam_icon.png", "text": "Pemadam" }
     ],
     "answer": [1],
     "score": 1
@@ -23,7 +25,8 @@
   {
     "kategori": "pkn",
     "type": "matrix",
-    "question": "Pilih jawaban yang tepat untuk setiap pernyataan berdasarkan gambar berikut:<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Indonesia.svg/320px-Flag_of_Indonesia.svg.png' width='200'>",
+    "question": "Pilih jawaban yang tepat untuk setiap pernyataan berdasarkan gambar bendera Indonesia. <br> [GAMBAR]",
+    "image": "bendera_indonesia.svg",
     "statements": ["Bendera tersebut adalah Merah Putih.", "Merah berarti berani."],
     "options": ["Setuju", "Tidak Setuju"],
     "answer": [0, 0],
