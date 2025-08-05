@@ -3,7 +3,7 @@
     "kategori": "ipa",
     "type": "single",
     "question": "Perhatikan gambar berikut! <br> [GAMBAR] <br>Gambar di atas menunjukkan?",
-    "image": "images/meja.png",
+    "image": "meja.png",
     "options": ["Fotosintesis", "Siklus air", "Pembekuan air", "Perubahan kimia"],
     "answer": 1,
     "score": 1
@@ -12,12 +12,12 @@
     "kategori": "ips",
     "type": "multiple",
     "question": "Manakah yang termasuk jenis pekerjaan berikut? <br> [GAMBAR]",
-    "image": "images/meja.png",
+    "image": "meja.png",
     "options": [
-      { "image": "guru_icon.png", "text": "Guru" },
-      { "image": "petani_icon.png", "text": "Petani" },
-      { "image": "dokter_icon.png", "text": "Dokter" },
-      { "image": "pemadam_icon.png", "text": "Pemadam" }
+      { "image": "meja.png", "text": "Guru" },
+      { "image": "meja.png", "text": "Petani" },
+      { "image": "meja.png", "text": "Dokter" },
+      { "image": "meja.png", "text": "Pemadam" }
     ],
     "answer": [1],
     "score": 1
