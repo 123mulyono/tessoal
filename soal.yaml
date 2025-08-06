@@ -1,7 +1,7 @@
 # --- AWAL DARI BANK SOAL ---
 # Setiap tanda hubung (-) di level paling atas menandakan satu objek soal baru.
 
-- kategori: Bahasa Indonesa
+- kategori: Bahasa Indonesia
   type: single
   question: |
     Perhatikan gambar berikut! <br> 
@@ -67,7 +67,7 @@
     Seperti halnya di Indonesia, berita di TV dipenuhi oleh kabar suasana mudik. Kereta api dan shinkansen yang penuh sesak, jalan tol yang macet, atau antrean panjang di bandara. Selain pulang kampung, sebagian orang Jepang memanfaatkan libur yang lumayan panjang selama tahun baru ini untuk tamasya, baik di dalam maupun di luar negeri. Tentu saja karena tingginya permintaan, harga tiket alat transportasi melonjak naik pada masa seperti ini.<br><br>
     <i>Sumber bacaan: http://majalah1000guru.net/2011/02/oshogatsu-lebaran-orang-jepang/</i><br><br>
     <b>Berdasarkan teks di atas, kapan perayaan tahun baru di Jepang dilaksanakan?</b>
-  image: soal1_1.jpg
+  image: soal 1_1.jpg
   options:
     - "28 Desember"
     - "1 Januari"
@@ -76,3 +76,4 @@
   answer: 1
   score: 1
 # --- AKHIR DARI BANK SOAL ---
+
