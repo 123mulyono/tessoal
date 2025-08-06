@@ -1,49 +1,77 @@
 [
-  {
-    "kategori": "ipa",
-    "type": "single",
-    "question": "Perhatikan gambar berikut! <br> [GAMBAR] <br>Gambar di atas menunjukkan?",
-    "image": "images/meja.png",
-    "options": ["Fotosintesis", "Siklus air", "Pembekuan air", "Perubahan kimia"],
-    "answer": 1,
-    "score": 1
-  },
-  {
-    "kategori": "ips",
-    "type": "multiple",
-    "question": "Manakah yang termasuk jenis pekerjaan berikut? <br> [GAMBAR]",
-    "image": "images/meja.png",
-    "options": [
-      { "image": "guru_icon.png", "text": "Guru" },
-      { "image": "petani_icon.png", "text": "Petani" },
-      { "image": "dokter_icon.png", "text": "Dokter" },
-      { "image": "pemadam_icon.png", "text": "Pemadam" }
-    ],
-    "answer": [1],
-    "score": 1
-  },
-  {
-    "kategori": "pkn",
-    "type": "matrix",
-    "question": "Pilih jawaban yang tepat untuk setiap pernyataan berdasarkan gambar bendera Indonesia. <br> [GAMBAR]",
-    "image": "bendera_indonesia.svg",
-    "statements": ["Bendera tersebut adalah Merah Putih.", "Merah berarti berani."],
-    "options": ["Setuju", "Tidak Setuju"],
-    "answer": [0, 0],
-    "score": 1
-  },
-  {
-    "kategori": "Bahasa Indonesia",
-    "type": "single",
-    "question": "<b>Bacalah teks berikut!</b><br><br><b>Oshogatsu: 'Lebaran' Orang Jepang</b><br><br>[GAMBAR]<br><br>Oshogatsu jika diterjemahkan ke dalam Bahasa Indonesia berarti perayaan tahun baru. Di Jepang, sebagaimana umumnya kebiasaan di berbagai penjuru dunia, tahun baru dirayakan pada tanggal 1 Januari sesuai penanggalan masehi. Ini sedikit berbeda dengan beberapa negara yang terpengaruh kuat oleh kebudayaan Cina yang merayakan tahun baru berdasarkan penanggalan Cina. Jepang pada awalnya juga merayakan tahun baru berdasar kalender Cina, tapi kemudian mengubahnya menjadi kalender masehi.<br><br>Bagi orang Jepang, tahun baru adalah saat berkumpul. Orang-orang yang hidup jauh dari kampung halaman atau menjadi perantau di kota-kota besar memanfaatkan tahun baru untuk kembali ke kampung halaman. Mereka berkumpul dengan orang tua dan sanak saudara dan merayakan pergantian tahun bersama.<br><br>Suasana tahun baru di Jepang sangat mirip dengan suasana menjelang lebaran bagi muslim di Indonesia. Sejak H-4, yaitu 28 Desember biasanya kantor-kantor sudah libur. Libur tersebut umumnya berlangsung sampai tanggal 4 atau 5 Januari. Orang-orang akan pulang kampung (<i>satogaeri</i>) ke rumah orang tuanya.<br><br>Seperti halnya di Indonesia, berita di TV dipenuhi oleh kabar suasana mudik. Kereta api dan shinkansen yang penuh sesak, jalan tol yang macet, atau antrean panjang di bandara. Selain pulang kampung, sebagian orang Jepang memanfaatkan libur yang lumayan panjang selama tahun baru ini untuk tamasya, baik di dalam maupun di luar negeri. Tentu saja karena tingginya permintaan, harga tiket alat transportasi melonjak naik pada masa seperti ini.<br><br><i>Sumber bacaan: http://majalah1000guru.net/2011/02/oshogatsu-lebaran-orang-jepang/</i><br><br><b>Berdasarkan teks di atas, kapan perayaan tahun baru di Jepang dilaksanakan?</b>",
-    "image": "soal1_1.jpg",
-    "options": [
-      "28 Desember",
-      "1 Januari",
-      "4 atau 5 Januari",
-      "Sesuai Kalender Cina"
-    ],
-    "answer": 1,
-    "score": 1
-  }
+    {
+        "kategori": "ipa",
+        "type": "single",
+        "question": "Perhatikan gambar berikut! <br> [GAMBAR] <br>Gambar di atas menunjukkan?",
+        "image": "images/meja.png",
+        "options": [
+            "Fotosintesis",
+            "Siklus air",
+            "Pembekuan air",
+            "Perubahan kimia"
+        ],
+        "answer": 1,
+        "score": 1
+    },
+    {
+        "kategori": "ips",
+        "type": "multiple",
+        "question": "Manakah yang termasuk jenis pekerjaan berikut? <br> [GAMBAR]",
+        "image": "images/meja.png",
+        "options": [
+            {
+                "image": "guru_icon.png",
+                "text": "Guru"
+            },
+            {
+                "image": "petani_icon.png",
+                "text": "Petani"
+            },
+            {
+                "image": "dokter_icon.png",
+                "text": "Dokter"
+            },
+            {
+                "image": "pemadam_icon.png",
+                "text": "Pemadam"
+            }
+        ],
+        "answer": [
+            1
+        ],
+        "score": 1
+    },
+    {
+        "kategori": "pkn",
+        "type": "matrix",
+        "question": "Pilih jawaban yang tepat untuk setiap pernyataan berdasarkan gambar bendera Indonesia. <br> [GAMBAR]",
+        "image": "bendera_indonesia.svg",
+        "statements": [
+            "Bendera tersebut adalah Merah Putih.",
+            "Merah berarti berani."
+        ],
+        "options": [
+            "Setuju",
+            "Tidak Setuju"
+        ],
+        "answer": [
+            0,
+            0
+        ],
+        "score": 1
+    },
+    {
+        "kategori": "Bahasa Indonesia",
+        "type": "single",
+        "question": "<b>Bacalah teks berikut!</b><br><br><b>Oshogatsu: 'Lebaran' Orang Jepang</b><br><br>[GAMBAR]<br><br>Oshogatsu jika diterjemahkan ke dalam Bahasa Indonesia berarti perayaan tahun baru. Di Jepang, sebagaimana umumnya kebiasaan di berbagai penjuru dunia, tahun baru dirayakan pada tanggal 1 Januari sesuai penanggalan masehi. Ini sedikit berbeda dengan beberapa negara yang terpengaruh kuat oleh kebudayaan Cina yang merayakan tahun baru berdasarkan penanggalan Cina. Jepang pada awalnya juga merayakan tahun baru berdasar kalender Cina, tapi kemudian mengubahnya menjadi kalender masehi.<br><br>Bagi orang Jepang, tahun baru adalah saat berkumpul. Orang-orang yang hidup jauh dari kampung halaman atau menjadi perantau di kota-kota besar memanfaatkan tahun baru untuk kembali ke kampung halaman. Mereka berkumpul dengan orang tua dan sanak saudara dan merayakan pergantian tahun bersama.<br><br>Suasana tahun baru di Jepang sangat mirip dengan suasana menjelang lebaran bagi muslim di Indonesia. Sejak H-4, yaitu 28 Desember biasanya kantor-kantor sudah libur. Libur tersebut umumnya berlangsung sampai tanggal 4 atau 5 Januari. Orang-orang akan pulang kampung (<i>satogaeri</i>) ke rumah orang tuanya.<br><br>Seperti halnya di Indonesia, berita di TV dipenuhi oleh kabar suasana mudik. Kereta api dan shinkansen yang penuh sesak, jalan tol yang macet, atau antrean panjang di bandara. Selain pulang kampung, sebagian orang Jepang memanfaatkan libur yang lumayan panjang selama tahun baru ini untuk tamasya, baik di dalam maupun di luar negeri. Tentu saja karena tingginya permintaan, harga tiket alat transportasi melonjak naik pada masa seperti ini.<br><br><i>Sumber bacaan: http://majalah1000guru.net/2011/02/oshogatsu-lebaran-orang-jepang/</i><br><br><b>Berdasarkan teks di atas, kapan perayaan tahun baru di Jepang dilaksanakan?</b>",
+        "image": "soal1_1.jpg",
+        "options": [
+            "28 Desember",
+            "1 Januari",
+            "4 atau 5 Januari",
+            "Sesuai Kalender Cina"
+        ],
+        "answer": 1,
+        "score": 1
+    }
 ]
