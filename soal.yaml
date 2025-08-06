@@ -7,7 +7,7 @@
     Perhatikan gambar berikut! <br> 
     [GAMBAR] <br>
     Gambar di atas menunjukkan?
-  image: images/meja.png
+  image: meja.png
   options:
     - Fotosintesis
     - Siklus air
@@ -21,7 +21,7 @@
   question: |
     Manakah yang termasuk jenis pekerjaan berikut? <br> 
     [GAMBAR]
-  image: images/meja.png
+  image: meja.png
   options:
     - image: guru_icon.png
       text: Guru
@@ -41,7 +41,7 @@
     Pilih jawaban yang tepat untuk setiap pernyataan 
     berdasarkan gambar bendera Indonesia. <br> 
     [GAMBAR]
-  image: bendera_indonesia.svg
+  image: meja.png
   statements:
     - Bendera tersebut adalah Merah Putih.
     - Merah berarti berani.
@@ -76,4 +76,5 @@
   answer: 1
   score: 1
 # --- AKHIR DARI BANK SOAL ---
+
 
