@@ -273,7 +273,7 @@
         // =================================================================
         // PERUBAHAN 2: Mengubah cara memuat soal dari JSON ke YAML
         // =================================================================
-        fetch("soal.yml") // Mengambil file .yml
+        fetch("soal.yaml") // Mengambil file .yml
           .then((res) => res.text()) // Mengambilnya sebagai teks mentah
           .then((yamlText) => {
             // Menggunakan library jsyaml untuk mengubah teks YAML menjadi objek JavaScript
